@@ -1,0 +1,35 @@
+html {
+  font-family: system-ui, sans-serif;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &__item {
+    width: 100%;
+    gap: 20px;
+    align-items: center;
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    border: 1px solid #a8a8a8;
+    padding: 15px;
+    border-radius: 8px;
+
+    &--clickable {
+      cursor: pointer;
+
+      &:hover {
+        background-color: #f8f8f8;
+      }
+    }
+  }
+}

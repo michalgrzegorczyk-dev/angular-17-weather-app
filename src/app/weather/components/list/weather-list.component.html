@@ -1,0 +1,16 @@
+@if (weatherList()) {
+  <ul class="list">
+    @for (weather of weatherList(); track $index) {
+      <li>
+        <button class="list__item list__item--clickable" (click)="clickWeather(weather.city.id)">
+          <span>{{ weather.city.name }}</span>
+          <span>{{ weather.temperature.value | temperatureConverter:weather.temperature.unit:Temperature.Celsius }}</span>
+          <span>{{ weather.temperature.description }}</span>
+          <img [src]="weather.temperature.icon" alt="Weather icon."/>
+        </button>
+      </li>
+    }
+  </ul>
+} @else {
+  <p>No weather data.</p>
+}
